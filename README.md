@@ -60,4 +60,4 @@ We'd love to get your help developing this project! Please contact us via [Twitt
 
 Copyright (c) 2006-2015 Zero Divide Inc. See [LICENSE](https://github.com/sferik/twitter/blob/master/LICENSE.md) for details.
 
-README coming soon!
+# ZeroDivide
