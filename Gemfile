@@ -50,8 +50,8 @@ gem 'therubyracer'
 gem 'less-rails'
 
 group :development do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  # Use pg as the database for Active Record
+  gem 'pg'
   gem "better_errors"
   gem "binding_of_caller"
   gem 'web-console'
