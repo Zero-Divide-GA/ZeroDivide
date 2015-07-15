@@ -13,19 +13,22 @@
 
 ActiveRecord::Schema.define(version: 20150119010006) do
 
-  create_table "caps", force: true do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "caps", force: :cascade do |t|
     t.float    "fpl_income"
     t.float    "premium_cap"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "cms_data", force: true do |t|
+  create_table "cms_data", force: :cascade do |t|
     t.string "key"
     t.text   "value"
   end
 
-  create_table "cost_maps", force: true do |t|
+  create_table "cost_maps", force: :cascade do |t|
     t.string   "consumer_type"
     t.integer  "child_number"
     t.integer  "age_threshold"
@@ -37,21 +40,21 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.string   "val"
   end
 
-  create_table "cpt_code_maps", force: true do |t|
+  create_table "cpt_code_maps", force: :cascade do |t|
     t.string   "cpt_code"
     t.string   "procedure_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "fpls", force: true do |t|
+  create_table "fpls", force: :cascade do |t|
     t.integer  "household_size"
     t.integer  "fpl_amt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "medicaids", force: true do |t|
+  create_table "medicaids", force: :cascade do |t|
     t.string   "state"
     t.float    "fpl_floor"
     t.datetime "created_at"
@@ -64,7 +67,7 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.string   "agency"
   end
 
-  create_table "navbar_entries", force: true do |t|
+  create_table "navbar_entries", force: :cascade do |t|
     t.string   "title"
     t.string   "url"
     t.datetime "created_at"
@@ -72,7 +75,7 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.integer  "user_id"
   end
 
-  create_table "oauth_access_grants", force: true do |t|
+  create_table "oauth_access_grants", force: :cascade do |t|
     t.integer  "resource_owner_id", null: false
     t.integer  "application_id",    null: false
     t.string   "token",             null: false
@@ -83,9 +86,9 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.string   "scopes"
   end
 
-  add_index "oauth_access_grants", ["token"], name: "index_oauth_access_grants_on_token", unique: true
+  add_index "oauth_access_grants", ["token"], name: "index_oauth_access_grants_on_token", unique: true, using: :btree
 
-  create_table "oauth_access_tokens", force: true do |t|
+  create_table "oauth_access_tokens", force: :cascade do |t|
     t.integer  "resource_owner_id"
     t.integer  "application_id"
     t.string   "token",             null: false
@@ -96,11 +99,11 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.string   "scopes"
   end
 
-  add_index "oauth_access_tokens", ["refresh_token"], name: "index_oauth_access_tokens_on_refresh_token", unique: true
-  add_index "oauth_access_tokens", ["resource_owner_id"], name: "index_oauth_access_tokens_on_resource_owner_id"
-  add_index "oauth_access_tokens", ["token"], name: "index_oauth_access_tokens_on_token", unique: true
+  add_index "oauth_access_tokens", ["refresh_token"], name: "index_oauth_access_tokens_on_refresh_token", unique: true, using: :btree
+  add_index "oauth_access_tokens", ["resource_owner_id"], name: "index_oauth_access_tokens_on_resource_owner_id", using: :btree
+  add_index "oauth_access_tokens", ["token"], name: "index_oauth_access_tokens_on_token", unique: true, using: :btree
 
-  create_table "oauth_applications", force: true do |t|
+  create_table "oauth_applications", force: :cascade do |t|
     t.string   "name",         null: false
     t.string   "uid",          null: false
     t.string   "secret",       null: false
@@ -109,9 +112,9 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.datetime "updated_at"
   end
 
-  add_index "oauth_applications", ["uid"], name: "index_oauth_applications_on_uid", unique: true
+  add_index "oauth_applications", ["uid"], name: "index_oauth_applications_on_uid", unique: true, using: :btree
 
-  create_table "plan_url_maps", force: true do |t|
+  create_table "plan_url_maps", force: :cascade do |t|
     t.string "state"
     t.string "rating_area"
     t.text   "url"
@@ -119,7 +122,7 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.string "issuer_name"
   end
 
-  create_table "plans", force: true do |t|
+  create_table "plans", force: :cascade do |t|
     t.text     "payload"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -135,7 +138,7 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.text     "network_url_attr"
   end
 
-  create_table "profiles", force: true do |t|
+  create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "demographic_data"
     t.datetime "created_at"
@@ -144,7 +147,7 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.text     "drug_data"
   end
 
-  create_table "rating_areas", force: true do |t|
+  create_table "rating_areas", force: :cascade do |t|
     t.string   "zip_code"
     t.string   "county"
     t.string   "state"
@@ -153,22 +156,22 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.datetime "updated_at"
   end
 
-  create_table "saved_plans", force: true do |t|
+  create_table "saved_plans", force: :cascade do |t|
     t.integer "plan_id"
     t.integer "profile_id"
   end
 
-  create_table "sessions", force: true do |t|
+  create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false
     t.text     "data"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true
-  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
+  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true, using: :btree
+  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
 
-  create_table "specialty_drugs", force: true do |t|
+  create_table "specialty_drugs", force: :cascade do |t|
     t.string   "name"
     t.string   "brand_equiv"
     t.string   "drug_class"
@@ -176,7 +179,7 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -193,10 +196,10 @@ ActiveRecord::Schema.define(version: 20150119010006) do
     t.integer  "age"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "zip_infos", force: true do |t|
+  create_table "zip_infos", force: :cascade do |t|
     t.string   "zip"
     t.string   "zip_type"
     t.string   "primary_city"
