@@ -162,8 +162,8 @@
 }
 .form-control.zipinput.zipcodecontrol, .btn.btn-default.submit {
 	font-size: 160%;
-	height: 60px;
-	width: auto;
+	width: 225px;
+	height: 55px;
 }
 .noc-control {
 	width: 300px;
@@ -241,10 +241,12 @@
 .form-content .input-group .zipcodecontrol,
 .form-content .input-group-btn {
 	display: inline-block;
+	width: 100%;
 }
 
 .button.btn.btn-default.submit {
-	width: 150px;
+	// width: 225px;
+	// height: 55px;
 	font-size: 22px;
 	background-color: grey;
 }
