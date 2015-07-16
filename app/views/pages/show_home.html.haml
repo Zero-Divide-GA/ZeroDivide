@@ -1,3 +1,86 @@
 .row.hero{class: "#{@page_data[:current_page]==1 ? 'homepage-override' : ''}"}
   .formbox{}
     = render partial: "complex_form_1", layout: 'simple_form_layout'
+
+
+/ Top white bar
+.row
+  .col-xs-12.topWhiteBar
+    .col-xs-4.topWhiteBarEl
+      %h3
+        Choose the right plan
+
+      %p
+        We can recomend plans based on your prescriptions and procedures so you can buy the right plan for   your needs.
+
+    .col-xs-4.topWhiteBarEl
+      %h3
+        Non-profit values you can trust
+
+      %p
+        We give unbiased advice about health plans because we're interested in the best coverage for you.
+
+    .col-xs-4.topWhiteBarEl
+      %h3
+        Financial aid available
+
+      %p
+        If you make less than $46,000 per year, you're likely eligible for financial aid. See estimates of   your monthly prescription and copay costs.
+
+
+/ The pink bar with the soccer image
+.row
+  .col-xs-12.pinkBar
+    .col-xs-4.soccer
+      %img.soccer(src="http://www.defencejobs.gov.au/navy/lifestyle/images/img_dragonBoating.jpg")
+
+    .col-xs-8.pinkSection
+      %h2
+        Getting health insurance is a great defensive move.
+
+      %h2
+        Let's work it out as a team.
+
+      %p
+        Take comfort in the fact that you'll have a team of people looking out for your health and   protecting you from potentially dying a lot. Most preventative care is free. If you have a primary   care doctor, they will likely be able to see you if you have an emergency.
+
+
+.row
+  .col-xs-12.howItWorksBar
+    .row
+      .col-xs-4.col-xs-offset-4
+        How it works
+
+
+    .row
+      .col-xs-4.arrowImg
+        %h1
+          1
+
+        %h2
+          Tell us a little about yourself
+
+        %p
+          Tell us about your prescriptions and if you need any big procedures.
+
+      .col-xs-4.arrowImg
+        %h1
+          2
+
+        %h2
+          See your plans
+
+        %p
+          Compare the costs of premiums and prescriptions
+
+      .col-xs-4.arrowImg
+        %h1
+          3
+
+        %h2
+          Buy without a hassle
+
+        %p
+          Easily purchase online. No phone calls with long wait times.
+
+/ .col-xs-4.col-xs-offset-4

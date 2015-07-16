@@ -392,3 +392,49 @@ input[type=text] {
 .orange-border {
 	border-color: $new-orange-color;
 }
+
+/* For the white contents bar on home page */
+
+.topWhiteBar{
+	background-color: white;
+	text-align: center;
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+.topWhiteBarEl{
+	font-size: 14px;
+	padding:0px 25px 0px 25px;
+}
+.whiteBarEl h3{
+	font-size: 21px;
+	font-weight: bold;
+}
+
+/*For the pink bar with the image on home page */
+.pinkBar{
+	height: 280px;
+	background-color:#ffb89a;
+}
+.pinkSection{
+	color: black;
+	padding: 50px 30px 30px 30px;
+}
+.pinkSection p{
+	color: #6e7071;
+	line-height: 180%;
+}
+.soccer{
+	padding-left: 0px;
+	margin-left: -8px;
+}
+img.soccer{
+	height: 280px;
+	width: 100%;
+	/*clip: rect(0px, 245px, 0px, 0px);
+	*/
+}
+.pinkSection h2{
+	font-size: 30px;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
