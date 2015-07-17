@@ -1,5 +1,13 @@
 TestDk::Application.routes.draw do
 
+  get 'visitors/index'
+
+  get 'visitors/show'
+
+  get 'visitors/new'
+
+  get 'visitors/create'
+
   # I like having this to populate the navbar with, via the database rather than do it in the views.
   resources :navbar_entries
 
