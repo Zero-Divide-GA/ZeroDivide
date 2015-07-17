@@ -1,3 +1,39 @@
 .row.hero{class: "#{@page_data[:current_page]==1 ? 'homepage-override' : ''}"}
 
-  %h1 Visitors#new
+  .col-xs-12
+    .row
+      .col-xs-4.col-xs-offset-4
+        %h1
+          Tell us about yourself
+          %h3
+            We will pair you with the right expert based on the information you provide.
+        %form_for{ :method => "post"}
+          %fieldset
+            %p
+            %b Name
+            <br>
+            %label{:for => "first"} 
+            %input{:name => "first_name", :type => "text", :placeholder => "First name", :value => ""}/ 
+              
+            %label{:for => "last"}
+            %input{:name => "last_name", :type => "text", :placeholder => "Last name", :value => ""}/ 
+            %p
+            %b Contact information
+            <br>
+            %label{:for => "phone"} 
+            %input{:name => "phone", :type => "text", :placeholder => "Phone number", :value => ""}/ 
+              
+            %label{:for => "email"}
+            %input{:name => "email", :type => "text", :placeholder => "Email", :value => ""}/ 
+            %p
+            %b Zip code
+            <br>
+            %label{:for => "zip"} 
+            %input{:name => "zip", :type => "text", :placeholder => "e.g. 90210", :value => ""}/ 
+            %p
+            %b Preferred language
+            <br>
+            %label{:for => "language"} 
+            %input{:name => "language", :type => "text", :placeholder => "e.g. Spanish", :value => ""}/
+            %p
+            %input{ :type => "submit" }
