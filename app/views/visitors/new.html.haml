@@ -2,38 +2,51 @@
 
   .col-xs-12
     .row
-      .col-xs-4.col-xs-offset-4.visitorForm
+      .col-xs-3.transPanel
+
+      .col-xs-6.visitorForm
         %h1
           Tell us about yourself
           %h3
             We will pair you with the right expert based on the information you provide.
+
+
         %form_for{ :method => "post"}
           %fieldset
             %p
-            %b Name
+              Name
             <br>
-            %label{:for => "first"} 
-            %input{:name => "first_name", :type => "text", :placeholder => "First name", :value => ""}/ 
-              
+            %label{:for => "first"}
+            %input{:name => "first_name", :type => "text", :placeholder => "First Name", :value => ""}/ 
+
             %label{:for => "last"}
-            %input{:name => "last_name", :type => "text", :placeholder => "Last name", :value => ""}/ 
+            %input{:name => "last_name", :type => "text", :placeholder => "Last Name", :value => ""}/ 
             %p
-            %b Contact information
+              Contact information
             <br>
-            %label{:for => "phone"} 
-            %input{:name => "phone", :type => "text", :placeholder => "Phone number", :value => ""}/ 
-              
+            %label{:for => "phone"}
+            %input{:name => "phone", :type => "text", :placeholder => "Phone Number", :value => ""}/ 
+
             %label{:for => "email"}
             %input{:name => "email", :type => "text", :placeholder => "Email", :value => ""}/ 
             %p
-            %b Zip code
+              Zip code
             <br>
-            %label{:for => "zip"} 
-            %input{:name => "zip", :type => "text", :placeholder => "e.g. 90210", :value => ""}/ 
+            %label{:for => "zip"}
+            %input{:name => "zip", :type => "text", :class => "zipField", :placeholder => "ex., 90210", :value => ""}/ 
             %p
-            %b Preferred language
+              Preferred language
             <br>
-            %label{:for => "language"} 
-            %input{:name => "language", :type => "text", :placeholder => "e.g. Spanish", :value => ""}/
-            %p
-            %input{ :type => "submit" }
+            / %label{:for => "language"}
+            / %input{:name => "language", :type => "text", :placeholder => "ex., Spanish", :value => ""}/
+
+            %label{:for => "language"}
+            %select{:name => "language", :placeholder => "ex., Spanish", :class => "langDropDown"}
+              %option{:value => "English"} English
+              %option{:value => "Spanish"} Spanish
+              %option{:value => "Mandarin"} Mandarin
+              %option{:value => "French"} French
+
+              %input{ :type => "submit", :class => "newPageSubmit" }
+
+      .col-xs-3.transPanel

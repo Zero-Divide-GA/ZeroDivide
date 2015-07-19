@@ -481,3 +481,62 @@ img.soccer{
 	margin-top: -10px;
 	margin-bottom: 20px;
 }
+
+/* Tell us about yourself form visitors/new */
+.visitorForm{
+	padding: 30px 40px 30px 50px;
+	background-color: white;
+	border: 3px solid #16a085;
+	height: 700px;
+}
+.visitorForm h1{
+	color: #fa5008;
+}
+.visitorForm h3{
+	font-size: 18px;
+	color: black;
+	font-style: italic;
+}
+.visitorForm p{
+	color: black;
+	font-size: 25px;
+	padding-left: 5px;
+	margin: 10px 0px -20px 0px;
+}
+.visitorForm input{
+	height: 55px;
+	width: 255px;
+	border: 2px solid #16a085;
+	
+}
+.visitorForm input::-webkit-input-placeholder{
+	color: gray;
+	font-size: 20px;
+}
+.transPanel{
+	background-color: rgba(100, 100, 100, .8);
+	z-index: 1;
+	height: 700px;
+}
+
+.langDropDown{
+	width: 255px;
+	height: 55px;
+	border: 2px solid #16a085;
+	-webkit-appearance: none;
+  	-webkit-border-radius: 0px;
+  	color: gray;
+	font-size: 20px;
+}
+.newPageSubmit{
+	width: 180px !important;
+	border: none !important;
+	color: white;
+	background-color: #696969;
+	position: relative;
+	top: 80px;
+	left: 0px;
+}
+.zipField, .langDropDown{
+	width: 350px !important;
+}
