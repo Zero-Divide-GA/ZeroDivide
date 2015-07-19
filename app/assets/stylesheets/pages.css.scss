@@ -414,12 +414,38 @@ input[type=text] {
 	text-align: center;
 	padding-top: 40px;
 	padding-bottom: 40px;
+	background-color: white;
 }
 .howItWorksBar h2{
 	font-weight: bold;
 }
 .howItWorksBar h3{
 	font-weight: emphasis;
+}
+.howItWorksBar h4{
+	font-size: 24px;
+}
+.searchPlansButt{
+	background-color: #18bc9c;
+	height: 55px;
+	width: 200px;
+	color: white;
+	font-size: 18px;
+	border: none;
+}
+.searchPlansButt:hover{
+	background-color: #16a085;
+}
+.zipForm{
+	height: 55px;
+	width: 200px;
+}
+.searchInstructions{
+	padding-bottom: 20px;
+}
+.footerBar{
+	padding: 80px 0px 50px 65px;
+	line-height: 30px;
 }
 
 /*For the pink bar with the image on home page */
@@ -449,6 +475,7 @@ img.soccer{
 	/*clip: rect(0px, 245px, 0px, 0px);
 	*/
 }
+
 .pinkSection h2{
 	font-size: 30px;
 	margin-top: -10px;

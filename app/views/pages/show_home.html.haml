@@ -86,6 +86,24 @@
 
         %p
           Easily purchase online. No phone calls with long wait times.
+    .row
+      .col-xs-4.col-xs-offset-4
+        %h4
+          Get covered today
 
-/ .col-xs-4.col-xs-offset-4
+    .row
+      .col-xs-4.col-xs-offset-4.searchInstructions
+        %h5
+          Search for plans with your zip code
 
+    .row
+      .col-xs-4.col-xs-offset-4
+        = form_for :visitor do |f|
+          = f.text_field :zip, :placeholder => "Zipcode, e.g. 90210", :class => "zipForm"
+          = f.submit "Search plans", :class => "searchPlansButt"
+
+.row
+  .col-xs-4.footerBar
+    About
+    %br
+    Contact
