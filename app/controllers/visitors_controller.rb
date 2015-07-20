@@ -7,14 +7,16 @@ class VisitorsController < ApplicationController
 
   def new
    @visitor = Visitor.new
-   render :new 
+   # render :new 
   end
 
   def create
     @visitor = Visitor.create(visitor_params)
+    puts "Saving visitor"
     if @visitor.save
-      flash[:success] = "Thank you. You information has been recorded and is being reviewed by our team of professionals. An insurance expert will be contacting you shortly."
+      # flash[:success] = "Thank you. You information has been recorded and is being reviewed by our team of professionals. An insurance expert will be contacting you shortly."
       redirect_to visitors_index_path
+      
     else
       render 'new'
     end
