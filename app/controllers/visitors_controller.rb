@@ -16,7 +16,6 @@ class VisitorsController < ApplicationController
     if @visitor.save
       # flash[:success] = "Thank you. You information has been recorded and is being reviewed by our team of professionals. An insurance expert will be contacting you shortly."
       redirect_to visitors_index_path
-      
     else
       render 'new'
     end

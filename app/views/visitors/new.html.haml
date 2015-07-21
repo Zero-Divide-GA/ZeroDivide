@@ -10,43 +10,30 @@
           %h3
             We will pair you with the right expert based on the information you provide.
 
+            .row
 
-        %form_for{ :method => "post"} 
-          %fieldset
-            %p
-              Name
-            <br>
-            %label{:for => "first"}
-            %input{:name => "first_name", :type => "text", :placeholder => "First Name", :value => ""}/ 
+        =form_for :visitor, :url => { :controller => "visitors", :method => "post"} do |f|
+          .form-group
+            = f.label 'Name'
+            = f.text_field :firstname, :placeholder => "First Name"
 
-            %label{:for => "last"}
-            %input{:name => "last_name", :type => "text", :placeholder => "Last Name", :value => ""}/ 
-            %p
-              Contact information
-            <br>
-            %label{:for => "phone"}
-            %input{:name => "phone", :type => "text", :placeholder => "Phone Number", :value => ""}/ 
+          .form-group
+            = f.text_field :lastname, :placeholder => "Last Name"
 
-            %label{:for => "email"}
-            %input{:name => "email", :type => "text", :placeholder => "Email", :value => ""}/ 
-            %p
-              Zip code
-            <br>
-            %label{:for => "zip"}
-            %input{:name => "zip", :type => "text", :class => "zipField", :placeholder => "ex., 90210", :value => ""}/ 
-            %p
-              Preferred language
-            <br>
-            / %label{:for => "language"}
-            / %input{:name => "language", :type => "text", :placeholder => "ex., Spanish", :value => ""}/
+          .form-group
+            = f.label :phone, 'Contact Information'
+            = f.text_field :phone, :placeholder => "Phone Number"
 
-            %label{:for => "language"}
-            %select{:name => "language", :placeholder => "ex., Spanish", :class => "langDropDown"}
-              %option{:value => "English"} English
-              %option{:value => "Spanish"} Spanish
-              %option{:value => "Mandarin"} Mandarin
-              %option{:value => "French"} French
+          .form-group
+            = f.text_field :email, :placeholder => "Email"
 
-              %input{ :type => "submit", :class => "newPageSubmit" }
+          .form-group
+            = f.label :zip
+            = f.text_field :zip, :placeholder => "e.g. 94108"
+
+          .form-group
+            = f.label :language
+            = f.select :visitor, :language, [['English', 1], ['Spanish', 2], ['French', 3], ['Mandarin', 4]]
+            = f.submit "Submit" 
 
       .col-xs-3.transPanel
