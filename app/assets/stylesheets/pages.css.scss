@@ -251,6 +251,10 @@
 	background-color: grey;
 }
 
+.get-started-btn{
+	margin-top: 45px;
+}
+
 .icon-box {
 	width: 90px;
 	height: 90px;
@@ -517,6 +521,43 @@ img.soccer{
 	background-color: rgba(100, 100, 100, .8);
 	z-index: 1;
 	height: 700px;
+}
+
+.enrollment{
+	background-color: white;
+	border: 3px solid #16a085;
+	height: 700px;
+	padding: 15px;
+	line-height: 30px;
+}
+
+.enrollment h2{
+	text-align: center;
+	color: #ec6723;
+	font-size: 28px;
+}
+
+.enroll-assist{
+  border-right: 1px solid #16a085;
+}
+
+.peeps{
+	text-align: center;
+	padding-top: 30px;
+}
+
+.peeps button{
+	margin-top: 30px;
+	background-color: #18bc9c;
+	height: 55px;
+	width: 200px;
+	color: white;
+	font-size: 18px;
+	border: none;
+}
+
+.peeps button:hover{
+	background-color: #16a085;
 }
 
 .langDropDown{

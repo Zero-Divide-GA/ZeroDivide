@@ -79,8 +79,8 @@ class PagesController < ApplicationController
     if subroutes.keys.include? @page_data[:current_page]
       subaction = subroutes[@page_data[:current_page]]
       self.send subaction
-    else
-      (redirect_to '/page/6' and return) if page_has_error?
+    # else
+    #   (redirect_to '/page/6' and return) if page_has_error?
       
       if @page_data[:current_page] == 4
         # We have household size and income - we can now decide if we have a medicaid referral

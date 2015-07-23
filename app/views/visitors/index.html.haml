@@ -1,2 +1,44 @@
-%h1 Visitors#index
-%p Find me in app/views/visitors/index.html.haml
+.row.hero{class: "#{@page_data[:current_page]==1 ? 'homepage-override' : ''}"}
+  .col-xs-12
+    .row
+      .col-xs-3.transPanel
+
+      .col-xs-6.enrollment
+        .row  
+          .col-xs-6.enroll-assist
+            %h2
+              Enrollment Assistance
+            %ul
+              %li Free health insurance help
+              %li In-person, by phone, or email
+              %li Answer questions about plans state discounts
+              %li Help you choose the best plan
+
+
+
+          .col-xs-6.self-enroll
+            %h2
+              Self-Enrollment
+            %ul
+              %li Free to use
+              %li Easy 4-step process
+              %li Compare multiple health insurance plans
+              %li See if you qualify for a state discount
+
+        .row
+          .col-xs-6.peeps.enroll-assist
+            = image_tag 'two_people.png', class: 'peeps'
+            %br
+              %a{:href => '/visitors/new'}
+                %button
+                  Request Assistance
+
+            
+          .col-xs-6.peeps
+            = image_tag 'one_person_orange.png', class: 'peeps'
+            %br
+            
+            %button
+              Begin Enrollment
+
+      .col-xs-3.transPanel

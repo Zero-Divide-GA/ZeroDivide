@@ -7,7 +7,7 @@ class VisitorsController < ApplicationController
 
   def new
    @visitor = Visitor.new
-   # render :new 
+   render :new 
   end
 
   def create

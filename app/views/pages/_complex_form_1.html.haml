@@ -9,8 +9,9 @@
       / %input.form-control.zipinput.zipcodecontrol{name: 'zip',  type: 'text', placeholder: 'ZIP code', size: '5', value: session[:current_info]['zip'], autofocus: true}
 
       %span.input-group-btn
-        %button.btn.btn-default.submit{}
-          Get Started
+        %a{:href => '/visitors/index'}
+          %button.btn.btn-default.submit.get-started-btn{}
+            Get Started
 
 
 
