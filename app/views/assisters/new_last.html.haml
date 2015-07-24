@@ -1,0 +1,42 @@
+/ Password Grab
+.row.hero{class: "#{@page_data[:current_page]==1 ? 'homepage-override' : ''}"}
+
+  .col-xs-12
+    .row
+      .col-xs-3.transPanel
+
+      .col-xs-6.visitorForm
+        %h1
+          Create an Account
+          %h3
+            The e-mail you provided is your Login ID.
+
+          .row
+            .col-xs-12.newForm
+              = form_for :visitor, :url => { :controller => "visitors", :method => "post"} do |f|
+                .row
+                  .col-xs-12
+                    = f.label 'Email'
+
+                .row
+                  .col-xs-12
+                    .form-group
+                      = f.text_field :firstname, :placeholder => "First Name"
+
+                .row
+                  .col-xs-12
+                    = f.label :phone, 'Password'
+
+                .row
+                  .col-xs-12
+                    .form-group
+                      = f.password :phone, :placeholder => "password"
+
+
+                .row
+                  .col-xs-3.col-xs-offset-8
+                    .form-group
+                      = f.submit "Next", :class => "newPageSubmit"
+
+//Takes you to next new page
+

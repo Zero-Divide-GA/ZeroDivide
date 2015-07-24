@@ -23,50 +23,64 @@
                 .row
                   .col-xs-12
                     .row
-                      .col-xs-3
+                      .col-xs-1
+                        = f.check_box :English, :class => "checkbox", inline_label: 'Remember me'
+
+                      .col-xs-2.boxLabel
                         English
-                        = f.check_box :English, :class => "checkbox"
-                        Spanish
+
+                      .col-xs-1
                         = f.check_box :Spanish, :class => "checkbox"
 
-                      .col-xs-3
+                      .col-xs-2.boxLabel
+                        Spanish
+
+                      .col-xs-1
                         = f.check_box :Mandarin, :class => "checkbox"
+
+                      .col-xs-2.boxLabel
+                        Mandarin
+
+                    .row
+                      .col-xs-1
                         = f.check_box :French, :class => "checkbox"
 
-                      .col-xs-3
+                      .col-xs-2.boxLabel
+                        French
+
+                      .col-xs-1
                         = f.check_box :Vietnamese, :class => "checkbox"
+
+                      .col-xs-2.boxLabel
+                        Vietnamese
+
+                      .col-xs-1
                         = f.check_box :Tagalog, :class => "checkbox"
-                    / = f.check_box :AmericanSignLanguage, :class => "checkbox"
 
+                      .col-xs-2.boxLabel
+                        Tagalog
 
-                /     .form-group
-                /       = f.text_field :firstname, :placeholder => "First Name"
-  
-                /   .col-xs-6
-                /     .form-group
-                /       = f.text_field :lastname, :placeholder => "Last Name"
-      
-                / .row
-                /   .col-xs-12
-                /     = f.label :phone, 'Contact Information'
+                    .row
+                      .col-xs-12
+                        .form-group
+                          = f.label :addlanguage, 'Additional Languages'
+                          (optional)
+                          %br
+                          = f.text_area :addlanguage, :placeholder => "eg. American Sign Language", :class => "additionalLangBox"
 
-                / .row
-                /   .col-xs-6
-                /     .form-group
-                /       = f.text_field :phone, :placeholder => "Phone Number"
-                /   .col-xs-6
-                /     .form-group
-                /       = f.text_field :email, :placeholder => "Email"
-                / .row
-                /   .col-xs-12
-                /     = f.label :zip, 'Zip Code'
+                    .row
+                      .col-xs-12
+                        .form-group
+                          = f.label :documentation, "Documentation"
+                          .assisterItalics
+                            Please upload a copy of your licence or certification.
 
-                / .row
-                /   .col-xs-6
-                /     .form-group
-                /       = f.text_field :zip, :placeholder => "e.g. 94108" , :class => "zipField"
+                          %br
+                          = f.text_field :documentation, :placeholder => ".jpeg, .pdf, or .doc", :class => "uploadDoc"
+                          %button.uploadButton.btn
+                            Upload
 
                 .row
-                  .col-xs-6.col-xs-offset-6
+                  .col-xs-3.col-xs-offset-8
                     .form-group
-                      = f.submit "Submit", :class => "newPageSubmit" 
+                      = f.submit "Next", :class => "newPageSubmit newTwoSubmit" 
