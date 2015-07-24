@@ -1,3 +1,4 @@
+/ ASSISTER NEW
 .row.hero{class: "#{@page_data[:current_page]==1 ? 'homepage-override' : ''}"}
 
   .col-xs-12
@@ -8,38 +9,48 @@
         %h1
           Tell us about yourself
           %h3
-            We will pair you with the right expert based on the information you provide.
+            We will pair you with enrollees based on the information you provide.
 
           .row
-            .col-xs-12 
+            .col-xs-12.newForm
               = form_for :visitor, :url => { :controller => "visitors", :method => "post"} do |f|
-                .form-group
-                  = f.label 'Name'
-                  = f.text_field :firstname, :placeholder => "First Name"
+                .row
+                  .col-xs-12
+                    = f.label 'Name'
 
-                .form-group
-                  = f.text_field :lastname, :placeholder => "Last Name"
+                .row
+                  .col-xs-6
+                    .form-group
+                      = f.text_field :firstname, :placeholder => "First Name"
+  
+                  .col-xs-6
+                    .form-group
+                      = f.text_field :lastname, :placeholder => "Last Name"
       
-                .form-group
-                  = f.label :phone, 'Contact Information'
-                  = f.text_field :phone, :placeholder => "Phone Number"
-      
-                .form-group
-                  = f.text_field :email, :placeholder => "Email"
-      
-                .form-group
-                  = f.label :zip
-                  = f.text_field :zip, :placeholder => "e.g. 94108"
-              
-                / .form-group
-                /   = f.label :language
-                /   = f.select :visitor, :lang
-                .form-group
-                  = f.submit "Submit"
+                .row
+                  .col-xs-12
+                    = f.label :phone, 'Contact Information'
 
-                / .form-group
-                /   = f.label :language
-                /   = f.select :visitor, :language
+                .row
+                  .col-xs-6
+                    .form-group
+                      = f.text_field :phone, :placeholder => "Phone Number"
+                  .col-xs-6
+                    .form-group
+                      = f.text_field :email, :placeholder => "Email"
+                .row
+                  .col-xs-12
+                    = f.label :zip, 'Zip Code'
+
+                .row
+                  .col-xs-6
+                    .form-group
+                      = f.text_field :zip, :placeholder => "e.g. 94108" , :class => "zipField"
+
+                .row
+                  .col-xs-6.col-xs-offset-6
+                    .form-group
+                      = f.submit "Submit", :class => "newPageSubmit" 
 
 //redirect to SHOW
 
