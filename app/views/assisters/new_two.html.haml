@@ -23,19 +23,42 @@
                 .row
                   .col-xs-12
                     .row
-                      .col-xs-3
+                      .col-xs-1
+                        = f.check_box :English, :class => "checkbox", inline_label: 'Remember me'
+
+                      .col-xs-2.boxLabel
                         English
-                        = f.check_box :English, :class => "checkbox"
-                        Spanish
+
+                      .col-xs-1
                         = f.check_box :Spanish, :class => "checkbox"
 
-                      .col-xs-3
+                      .col-xs-2.boxLabel
+                        Spanish
+
+                      .col-xs-1
                         = f.check_box :Mandarin, :class => "checkbox"
+
+                      .col-xs-2.boxLabel
+                        Mandarin
+
+                    .row
+                      .col-xs-1
                         = f.check_box :French, :class => "checkbox"
 
-                      .col-xs-3
+                      .col-xs-2.boxLabel
+                        French
+
+                      .col-xs-1
                         = f.check_box :Vietnamese, :class => "checkbox"
+
+                      .col-xs-2.boxLabel
+                        Vietnamese
+
+                      .col-xs-1
                         = f.check_box :Tagalog, :class => "checkbox"
+
+                      .col-xs-2.boxLabel
+                        Tagalog
                     / = f.check_box :AmericanSignLanguage, :class => "checkbox"
 
 
