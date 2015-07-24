@@ -59,37 +59,28 @@
 
                       .col-xs-2.boxLabel
                         Tagalog
-                    / = f.check_box :AmericanSignLanguage, :class => "checkbox"
 
+                    .row
+                      .col-xs-12
+                        .form-group
+                          = f.label :addlanguage, 'Additional Languages'
+                          (optional)
+                          %br
+                          = f.text_area :addlanguage, :placeholder => "eg. American Sign Language", :class => "additionalLangBox"
 
-                /     .form-group
-                /       = f.text_field :firstname, :placeholder => "First Name"
-  
-                /   .col-xs-6
-                /     .form-group
-                /       = f.text_field :lastname, :placeholder => "Last Name"
-      
-                / .row
-                /   .col-xs-12
-                /     = f.label :phone, 'Contact Information'
+                    .row
+                      .col-xs-12
+                        .form-group
+                          = f.label :documentation, "Documentation"
+                          .assisterItalics
+                            Please upload a copy of your licence or certification.
 
-                / .row
-                /   .col-xs-6
-                /     .form-group
-                /       = f.text_field :phone, :placeholder => "Phone Number"
-                /   .col-xs-6
-                /     .form-group
-                /       = f.text_field :email, :placeholder => "Email"
-                / .row
-                /   .col-xs-12
-                /     = f.label :zip, 'Zip Code'
-
-                / .row
-                /   .col-xs-6
-                /     .form-group
-                /       = f.text_field :zip, :placeholder => "e.g. 94108" , :class => "zipField"
+                          %br
+                          = f.text_field :documentation, :placeholder => ".jpeg, .pdf, or .doc", :class => "uploadDoc"
+                          %button.uploadButton.btn
+                            Upload
 
                 .row
-                  .col-xs-6.col-xs-offset-6
+                  .col-xs-3.col-xs-offset-8
                     .form-group
-                      = f.submit "Submit", :class => "newPageSubmit" 
+                      = f.submit "Next", :class => "newPageSubmit newTwoSubmit" 

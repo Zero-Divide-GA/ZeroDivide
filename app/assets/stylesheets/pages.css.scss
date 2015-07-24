@@ -496,7 +496,7 @@ img.soccer{
 .visitorForm h1{
 	color: #fa5008;
 }
-.visitorForm h3{
+.visitorForm h3, .assisterItalics{
 	font-size: 18px;
 	color: black;
 	font-style: italic;
@@ -575,8 +575,11 @@ img.soccer{
 	color: white;
 	background-color: #696969;
 	position: relative;
-	top: 80px;
+	top: 150px;
 	left: 0px;
+}
+.newTwoSubmit{
+	top: 100px;
 }
 .zipField, .langDropDown{
 	width: 350px !important;
@@ -601,5 +604,24 @@ img.soccer{
 	margin-top: 20px;
 	margin-left: -25px;
 	margin-right: 30px;
+}
+
+.additionalLangBox{
+	width: 355px;
+	height: 70px;
+	border: 2px solid #16a085;
+}
+.uploadDoc{
+	height: 40px !important;
+	width: 355px !important;
+	border: 1px solid gray !important;
+}
+.uploadButton{
+	height: 40px;
+	border: 1px solid gray;
+	margin-top: -5px;
+	font-style: italic;
+	font-size: 20px;
+	padding: 0px 10px 0px 10px !important;
 }
 
