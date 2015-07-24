@@ -5,6 +5,9 @@ class AssistersController < ApplicationController
   def new
   end
 
+  def new_two
+  end
+
   def show
   end
 
