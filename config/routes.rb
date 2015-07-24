@@ -6,6 +6,8 @@ TestDk::Application.routes.draw do
 
   get 'assisters/new_two'
 
+  get 'assisters/new_last'
+
   get 'assisters/show'
 
   get 'assisters/create'
