@@ -12,7 +12,34 @@
 
           .row
             .col-xs-12 
-              =form_for :visitor, :url => { :controller => "visitors", :method => "post"} do |f|
+              = form_for :visitor, :url => { :controller => "visitors", :method => "post"} do |f|
                 .form-group
                   = f.label 'Name'
                   = f.text_field :firstname, :placeholder => "First Name"
+
+                .form-group
+                  = f.text_field :lastname, :placeholder => "Last Name"
+      
+                .form-group
+                  = f.label :phone, 'Contact Information'
+                  = f.text_field :phone, :placeholder => "Phone Number"
+      
+                .form-group
+                  = f.text_field :email, :placeholder => "Email"
+      
+                .form-group
+                  = f.label :zip
+                  = f.text_field :zip, :placeholder => "e.g. 94108"
+              
+                / .form-group
+                /   = f.label :language
+                /   = f.select :visitor, :lang
+                .form-group
+                  = f.submit "Submit"
+
+                / .form-group
+                /   = f.label :language
+                /   = f.select :visitor, :language
+
+//redirect to SHOW
+
