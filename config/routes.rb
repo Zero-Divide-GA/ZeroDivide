@@ -1,5 +1,13 @@
 TestDk::Application.routes.draw do
 
+  get 'assisters/index'
+
+  get 'assisters/new'
+
+  get 'assisters/show'
+
+  get 'assisters/create'
+
   get 'visitors/index'
 
   get 'visitors/show'
