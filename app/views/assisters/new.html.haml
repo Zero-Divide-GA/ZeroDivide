@@ -1,2 +1,18 @@
-%h1 Assisters#new
-%p Find me in app/views/assisters/new.html.haml
+.row.hero{class: "#{@page_data[:current_page]==1 ? 'homepage-override' : ''}"}
+
+  .col-xs-12
+    .row
+      .col-xs-3.transPanel
+
+      .col-xs-6.visitorForm
+        %h1
+          Tell us about yourself
+          %h3
+            We will pair you with the right expert based on the information you provide.
+
+          .row
+            .col-xs-12 
+              =form_for :visitor, :url => { :controller => "visitors", :method => "post"} do |f|
+                .form-group
+                  = f.label 'Name'
+                  = f.text_field :firstname, :placeholder => "First Name"
