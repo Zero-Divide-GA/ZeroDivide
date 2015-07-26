@@ -12,7 +12,12 @@ class AssistersController < ApplicationController
 
   def new_two
    @assister = Assister.new
-   render :new 
+   render :new_two
+ end
+ 
+  def new_last
+   @assister = Assister.new
+   render :new_last
   end
 
   def create

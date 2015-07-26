@@ -7,7 +7,7 @@ class Assister < ActiveRecord::Base
   # Relationships
   has_many :visitors
 
-  # # Paperclip
+  # # Paperclip (download paperclip gem)
   # # Still need to create file attachment functionality in assister model
   # # Need to change attachment content types
 
